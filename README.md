@@ -23,3 +23,4 @@ npm run dev
 
 ## Deployment
 Deployed using Vercel
+🔗 **Live Site:** https://therahulg-portfolio.vercel.app/
