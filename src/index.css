@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  :root {
+    --background: 270 50% 8%;
+    --foreground: 270 20% 95%;
+
+    --card: 270 45% 12%;
+    --card-foreground: 270 20% 95%;
+
+    --popover: 270 45% 12%;
+    --popover-foreground: 270 20% 95%;
+
+    --primary: 270 70% 60%;
+    --primary-foreground: 270 20% 98%;
+
+    --secondary: 280 60% 25%;
+    --secondary-foreground: 270 20% 95%;
+
+    --muted: 270 30% 18%;
+    --muted-foreground: 270 15% 60%;
+
+    --accent: 300 80% 65%;
+    --accent-foreground: 270 20% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 270 30% 20%;
+    --input: 270 30% 20%;
+    --ring: 270 70% 60%;
+
+    --radius: 0.75rem;
+
+    /* Custom tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(270, 70%, 60%) 0%, hsl(300, 80%, 65%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(270, 50%, 12%) 0%, hsl(270, 50%, 6%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(270, 45%, 14%) 0%, hsl(270, 45%, 10%) 100%);
+    --glow-primary: 0 0 40px hsl(270, 70%, 50%, 0.3);
+    --glow-accent: 0 0 60px hsl(300, 80%, 65%, 0.2);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  code, pre {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-primary);
+  }
+
+  .gradient-border {
+    position: relative;
+  }
+
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: var(--gradient-primary);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  }
+
+  .glow-card {
+    box-shadow: var(--glow-primary);
+    transition: box-shadow 0.3s ease;
+  }
+
+  .glow-card:hover {
+    box-shadow: var(--glow-accent);
+  }
+
+  .skill-tag {
+    @apply px-4 py-2 rounded-lg bg-secondary text-foreground text-sm font-medium;
+    @apply border border-border transition-all duration-300;
+  }
+
+  .skill-tag:hover {
+    @apply border-primary;
+    box-shadow: 0 0 20px hsl(270, 70%, 50%, 0.3);
+  }
+
+  .section-heading {
+    @apply text-3xl md:text-4xl font-bold gradient-text mb-8;
+  }
+}
