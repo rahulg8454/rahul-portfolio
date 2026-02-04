@@ -1,26 +1,39 @@
-# Rahul's Portfolio
+# Rahul Gupta – Personal Portfolio
 
-Personal portfolio website built using React, TypeScript, and Tailwind CSS.
+A modern, responsive portfolio website showcasing my projects, skills, and professional experience as a Computer Science graduate and MERN Stack Developer.
 
-## Tech Stack
-- React (Vite)
-- TypeScript
-- Tailwind CSS
-- Framer Motion
-- Shadcn UI
+🔗 **Live Site:** [therahulg-portfolio.vercel.app](https://therahulg-portfolio.vercel.app/)
 
-## Features
-- Responsive design
-- Smooth animations
-- Project showcase
-- Resume download
-- Contact form
+---
 
-## Setup
+## 🛠️ Tech Stack
 
-npm install
-npm run dev
+- **Frontend:** React 18, TypeScript
+- **Build Tool:** Vite
+- **Styling:** Tailwind CSS
+- **UI Components:** Radix UI, Shadcn/ui
+- **Animations:** Framer Motion
+- **Icons:** Lucide React
+- **Deployment:** Vercel
 
-## Deployment
-Deployed using Vercel
-🔗 **Live Site:** https://therahulg-portfolio.vercel.app/
+---
+
+## ✨ Features
+
+- ✅ Fully responsive design (mobile, tablet, desktop)
+- ✅ Smooth scroll navigation and page animations
+- ✅ Project showcase with live GitHub repository links
+- ✅ Downloadable resume (PDF)
+- ✅ Skills section organized by technology categories
+- ✅ Contact section with social media links
+- ✅ Dark theme with custom purple accent colors
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+ installed
+- npm or yarn package manager
+

@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import profileImage from "@/assets/profile.jpg";
+import profileImage from "@/assets/profile2.png";
 
 const About = () => {
   const sectionRef = useRef<HTMLElement>(null);
